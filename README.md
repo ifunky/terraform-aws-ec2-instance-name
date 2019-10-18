@@ -1,7 +1,7 @@
 <!-- Auto generated file -->
 
 # Create EC2 Instance Names
- [![Build Status](https://git.fincore.com/cmp/terraform-aws-ec2-instance-name/badges/master/pipeline.svg)](https://git.fincore.com/cmp/terraform-aws-ec2-instance-name/pipelines)
+ [![Build Status](https://git./pipeline.svg)](https://git./pipelines)
 
 A very opinionated module used to create instance names.  
 
@@ -17,16 +17,14 @@ A very opinionated module used to create instance names.
 Based on the usage code below this module will produce a server name:- FWEWAAIRWEVP001 
 
 ```hcl
-module "web_instance_name" {
-  source = "git::https://git.fincore.com/cmp/terraform-aws-instance-name.git?ref=master"
+    source = "git::https://github.com/ifunky/terraform-aws-ec2-instance-name?ref=master"
 
-  company           = "Finworks"
-  availability_zone = "eu-west-2a"
-  account_type      = "AIR"
-  server_role       = "WEB"
-  environment       = "prod"
-  counter           = "001"
-}
+    company           = "iFunky"
+    availability_zone = "eu-west-1a"
+    account_type      = "FUN"
+    server_role       = "WEB"
+    environment       = "dev"
+    counter           = "001"
 ```
 
 

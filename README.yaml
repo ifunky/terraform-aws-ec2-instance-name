@@ -10,8 +10,8 @@ title: Create EC2 Instance Names
 # Build Badges
 badges:
   - name: "Build Status"
-    image: "https://git.fincore.com/cmp/terraform-aws-ec2-instance-name/badges/master/pipeline.svg"
-    url: "https://git.fincore.com/cmp/terraform-aws-ec2-instance-name/pipelines"
+    image: "https://"
+    url: "https://"
 description: |-
   A very opinionated module used to create instance names.  
 
@@ -27,13 +27,13 @@ usage: |-
 
   ```hcl
   module "web_instance_name" {
-    source = "git::https://git.fincore.com/cmp/terraform-aws-instance-name.git?ref=master"
+    source = "git::https://github.com/ifunky/terraform-aws-ec2-instance-name?ref=master"
 
-    company           = "Finworks"
-    availability_zone = "eu-west-2a"
-    account_type      = "AIR"
+    company           = "iFunky"
+    availability_zone = "eu-west-1a"
+    account_type      = "FUN"
     server_role       = "WEB"
-    environment       = "prod"
+    environment       = "dev"
     counter           = "001"
   }
   ```

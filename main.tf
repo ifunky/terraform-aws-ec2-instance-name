@@ -8,8 +8,8 @@ locals {
     eu-west-2c = "EWC"
     }
   companies = {
-    finworks = "FW"
-    fincore  = "FC"
+    ifunky  = "IF"
+    dmgtech = "DT"
     }
 
     company_short_name = local.companies[lower(var.company)]

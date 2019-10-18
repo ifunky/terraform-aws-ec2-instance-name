@@ -1,0 +1,53 @@
+---
+#
+# Run `make createdocs` to rebuild the `README.md`
+#
+
+# Name of this project
+name: terraform-aws-ec2-instance-name
+title: Create EC2 Instance Names
+
+# Build Badges
+badges:
+  - name: "Build Status"
+    image: "https://git.fincore.com/cmp/terraform-aws-ec2-instance-name/badges/master/pipeline.svg"
+    url: "https://git.fincore.com/cmp/terraform-aws-ec2-instance-name/pipelines"
+description: |-
+  A very opinionated module used to create instance names.  
+
+  ## Features
+
+  ### EC2 Instance Name
+  - Returns a name based on parameters passed
+  - AWS availability zone incorporated into name 
+
+# How to use this project
+usage: |-
+  Based on the usage code below this module will produce a server name:- FWEWAAIRWEVP001 
+
+  ```hcl
+  module "web_instance_name" {
+    source = "git::https://git.fincore.com/cmp/terraform-aws-instance-name.git?ref=master"
+
+    company           = "Finworks"
+    availability_zone = "eu-west-2a"
+    account_type      = "AIR"
+    server_role       = "WEB"
+    environment       = "prod"
+    counter           = "001"
+  }
+  ```
+
+# Include output from terraform-module-inspect
+include:
+  - "docs/targets.md"
+  - "docs/metadata.md"
+
+# List of useful related projects/links
+related:
+  - name: "PolyDev"
+    description: "PolyDev repo and setup guide"
+    url: "https://git.fincore.com/cmp/polydev"
+  - name: "EC2 Windows Instance Module"
+    description: "Create EC2 Windows instances"
+    url: "https://git.fincore.com/cmp/terraform-aws-ec2-windows-instance"
